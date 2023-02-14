@@ -1,20 +1,8 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+//import axios from 'axios';
+import React from 'react';
+import Home from './pages/Home';
 
-function App() {
-   const [hello, setHello] = useState('')
-
-    useEffect(() => {
-        axios.get('/api/hello')
-        .then(response => setHello(response.data))
-        .catch(error => console.log(error))
-    }, []);
-
-    return (
-        <div>
-            백엔드에서 가져온 데이터입니다 : {hello}
-        </div>
-    );
-}
+// 추후에 기능이 고도화되면 라우팅하여 여러개의 페이지를 관리
+const App = () => <Home />;
 
 export default App;
