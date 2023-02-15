@@ -90,7 +90,7 @@
   border: none;
   border-radius: 0;
   height: 36px;
-  width: 36px;
+  width: 50px;
   background-color: inherit;
 }
 .todoapp__item-edit-btn:hover,

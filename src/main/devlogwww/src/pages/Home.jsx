@@ -14,7 +14,7 @@ const Home = () => {
             <InputBox todoList = {todoList} setTodoList={setTodoList}/>
 
             <ToDoItemList
-                title = {'할 일'}
+                title = {'Todo List'}
                 todoList = {todoList}
                 setTodoList = {setTodoList}
             />

@@ -1,13 +1,16 @@
 import React from 'react';
 
-const ToDoItem = () => (
+const ToDoItem = ({todoItem, todoList, setTodoList}) => (
     <li className="todoapp__item">
+
         <input type="checkbox" className="todoapp__item-checkbox" />
-        <span className="todoapp__item-ctx">ToDo Item</span>
+
+        <span className="todoapp__item-ctx">{todoItem.text}</span>
+
         <button type="button" className="todoapp__item-edit-btn">
             수정
         </button>
-        {/* 삭제 버튼 */}
+
         <button type="button" className="todoapp__item-delete-btn">
             삭제
         </button>
