@@ -1,14 +1,19 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDoItemList = () => (
-    // 수정
+const ToDoItemList = ({title, todoList, setTodoList}) => (
+
     <div className="todoapp__list">
-        <p className="todoapp__list-tit">제목</p>
+        <p className="todoapp__list-tit">{title}</p>
         <ul className="todoapp__list-ul">
-            <ToDoItem />
-            <ToDoItem />
-            <ToDoItem />
+            {todoList && todoList.map((toDoItem =>
+                <ToDoItem
+                    Key = {toDoItem.id}
+                    todoItem = {toDoItem}
+                    todoList = {todoList}
+                    setTodoList = {setTodoList}
+                />
+            ))}
         </ul>
     </div>
 );

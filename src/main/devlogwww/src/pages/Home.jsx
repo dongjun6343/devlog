@@ -1,13 +1,32 @@
-import React from 'react';
+import React, {useState} from 'react';
 import InputBox from '../components/InputBox';
 import ToDoItemList from '../components/ToDoItemList';
 
-const Home = () => (
-    <div className="homepage__container">
-        <InputBox />
-        <ToDoItemList />
-        <ToDoItemList />
-    </div>
-);
+const Home = () => {
+
+
+    // useState - todo 아이템을 담을 리스트와 setter 함수를 생성
+    const [todoList, setTodoList] = useState([]);
+
+    return (
+        <div className="homepage__container">
+
+            <InputBox todoList = {todoList} setTodoList={setTodoList}/>
+
+            <ToDoItemList
+                title = {'할 일'}
+                todoList = {todoList}
+                setTodoList = {setTodoList}
+            />
+
+
+            <ToDoItemList
+
+            />
+
+        </div>
+    );
+};
+
 
 export default Home;
