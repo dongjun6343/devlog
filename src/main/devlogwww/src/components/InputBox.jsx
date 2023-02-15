@@ -20,12 +20,13 @@ const InputBox = ({ todoList, setTodoList}) => {
         const nextTodoList = todoList.concat({
             id : todoList.length,
             text,
+            checked: false, // false : 완료하지 않은 목록
         });
 
         setTodoList(nextTodoList);
 
         setText(''); // 초기화.
-        inputRef.current.focus(); //
+        inputRef.current.focus();
     }
 
     return (

@@ -101,3 +101,8 @@
 .todoapp__item-edit-btn {
   margin-right: 3px;
 }
+.todoapp__item-ctx-checked {
+  font-style: italic;
+  text-decoration: line-through;
+  color: #868e96;
+}
