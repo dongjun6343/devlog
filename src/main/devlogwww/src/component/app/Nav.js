@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+
 function Nav() {
 
     return (
@@ -14,21 +15,27 @@ function Nav() {
                         </li>
 
                         {/* 게시판 */}
-                        <li className="nav-item dropdown">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/boardlist">글목록</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/boardwrite">글추가</Link>
+                        </li>
 
-                            <div className="nav-link dropdown-toggle" id="navbarDropdown"
-                                 role="button" data-toggle="dropdown" aria-haspopup="true"
-                                 aria-expanded="false">게시판</div>
+                    </ul>
 
-                            <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <Link className="dropdown-item" to="/boardlist">글목록</Link>
-                                <Link className="dropdown-item" to="/boardwrite">글추가</Link>
-                            </div>
+                    <ul className="navbar-nav ml-auto">
+                        {/* 로그인 */}
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/login">로그인</Link>
+                        </li>
+
+                        {/* 회원가입 */}
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/join">회원가입</Link>
                         </li>
                     </ul>
-                    <ul className="navbar-nav ml-auto">
 
-                    </ul>
                 </div>
             </div>
         </nav>

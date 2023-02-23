@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/board")
 @RequiredArgsConstructor
@@ -16,9 +18,13 @@ public class BoardApiController {
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<BoardResponseDto> getBoardList(@PathVariable Long id){
-
+    public ResponseEntity<BoardResponseDto> getBoard(@PathVariable Long id){
         return ResponseEntity.ok(boardService.findById(id));
+    }
+
+    @GetMapping
+    public ResponseEntity<List<BoardResponseDto>> getBoardList(){
+        return ResponseEntity.ok(boardService.findAll());
     }
 
 }
