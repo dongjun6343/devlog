@@ -26,8 +26,17 @@ function BoardDetail(){
 
     useEffect(() => {
         // console.log('마운트 될 때만 실행된다.');
+        // 마운트(Mount)는 DOM 객체가 생성되고 브라우저에 나타나는 것
         getBoardDetail();
     }, []);
+
+    //update
+    const updateBoard = {
+        id : board.id,
+        title : board.title,
+        content : board.content
+    }
+
 
     return (
         <div>
@@ -71,7 +80,8 @@ function BoardDetail(){
 			</table>
 
 			<div className="my-3 d-flex justify-content-center">
-				<Link className="btn btn-outline-secondary" to="/boardlist"><i className="fas fa-list"></i> 글목록</Link>
+				<Link className="btn btn-outline-secondary" to="/boardlist"><i className="fas fa-list"></i> 목록</Link>
+				<Link className="btn btn-outline-secondary" to="/boardupdate" state={{ board: updateBoard }}><i className="fas fa-edit"></i> 수정</Link>
 			</div>
         </div>
     );

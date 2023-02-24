@@ -19,7 +19,7 @@ function Nav() {
                             <Link className="nav-link" to="/boardlist">글목록</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" to="/boardwrite">글추가</Link>
+                            <Link className="nav-link" to="/boardwrite">글등록</Link>
                         </li>
 
                     </ul>
