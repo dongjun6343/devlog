@@ -1,6 +1,7 @@
 package com.tobe.devlog.domain.board.entitiy;
 
 
+import com.tobe.devlog.domain.member.entity.Member;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
@@ -22,7 +23,6 @@ public class Board {
     private String title;
     @Column(nullable = false)
     private String content;
-
 
     @Builder
     public Board(Long id, String title, String content) {
